@@ -5,21 +5,21 @@
 class Mehshell < Formula
   desc "Fast, parallelized zsh prompt engine written in Go"
   homepage "https://github.com/blackflame007/mehshell"
-  version "0.1.10"
+  version "0.1.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/blackflame007/mehshell/releases/download/v0.1.10/mehshell_darwin_amd64.tar.gz"
-      sha256 "11ee6ef11fb7893e3d731dc53556d76bdff0d41cce3b13dc9ac0e265f4356703"
+      url "https://github.com/blackflame007/mehshell/releases/download/v0.1.11/mehshell_darwin_amd64.tar.gz"
+      sha256 "6018f58e5f9da9add00d687bf5879d2114ffc281a6b9e4c3fd5b3f9bbcb884c4"
 
       define_method(:install) do
         bin.install "mehshell"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/blackflame007/mehshell/releases/download/v0.1.10/mehshell_darwin_arm64.tar.gz"
-      sha256 "9549fb6957b15f5bf53c229eb168416ee3a277b290c8d5d9dc2855001474fe56"
+      url "https://github.com/blackflame007/mehshell/releases/download/v0.1.11/mehshell_darwin_arm64.tar.gz"
+      sha256 "ca96b98cf4497fb51f69d2720faa144188100f36096c3d2f1488cef94828bd4b"
 
       define_method(:install) do
         bin.install "mehshell"
@@ -29,15 +29,15 @@ class Mehshell < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blackflame007/mehshell/releases/download/v0.1.10/mehshell_linux_amd64.tar.gz"
-      sha256 "acb8ce27e8d7a50a973b4f2e9e4554651dafae904ac9321f985933a592fca068"
+      url "https://github.com/blackflame007/mehshell/releases/download/v0.1.11/mehshell_linux_amd64.tar.gz"
+      sha256 "2173e15bc709de8086c4559bfdde6a4321e29cd75474b612a119fe0682e20125"
       define_method(:install) do
         bin.install "mehshell"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/blackflame007/mehshell/releases/download/v0.1.10/mehshell_linux_arm64.tar.gz"
-      sha256 "aa756ec7b80248cc1097096f81b1b58eb54930bdec7ddc317c41ef8648d6fe6b"
+      url "https://github.com/blackflame007/mehshell/releases/download/v0.1.11/mehshell_linux_arm64.tar.gz"
+      sha256 "66ba770e7e80c30b1890d3d257e4e6b9ec43e272d491d5e5d63e5690de949e7f"
       define_method(:install) do
         bin.install "mehshell"
       end
